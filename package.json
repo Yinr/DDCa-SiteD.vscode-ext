@@ -1,0 +1,50 @@
+{
+    "name": "ddcat-sited",
+    "displayName": "DDCat SiteD",
+    "description": "DDCat SiteD Syntax for VS Code",
+    "author": "Yinr <yinr@yinr.cc>",
+    "publisher": "Yinr",
+    "icon": "assets/ddcat.png",
+    "version": "0.1.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "keywords": [
+        "siteD",
+        "DDCat"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Yinr/DDCa-SiteD.vscode-ext.git"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "sited",
+                "aliases": [
+                    "SiteD",
+                    "siteD",
+                    "Sited"
+                ],
+                "extensions": [
+                    ".sited",
+                    ".sited.xml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sited",
+                "scopeName": "source.sited",
+                "path": "./syntaxes/sited.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^3.13.1"
+    }
+}

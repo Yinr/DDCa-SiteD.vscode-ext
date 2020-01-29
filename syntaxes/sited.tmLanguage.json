@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "sited",
+  "scopeName": "source.sited",
+  "patterns": [
+    {
+      "include": "#code-tag"
+    },
+    {
+      "include": "text.xml"
+    }
+  ],
+  "repository": {
+    "code-tag": {
+      "begin": "(<)(code)(>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.code.sited"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.sited"
+        },
+        "2": {
+          "name": "entity.name.tag.localname.sited"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.sited"
+        }
+      },
+      "end": "(</)(code)(>)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.code.sited"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.sited"
+        },
+        "2": {
+          "name": "entity.name.tag.localname.sited"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.sited"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#cdata-js"
+        },
+        {
+          "include": "text.xml"
+        }
+      ]
+    },
+    "cdata-js": {
+      "name": "meta.cdata.javascript.sited",
+      "begin": "(<!\\[)(CDATA)(\\[)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.cdata.sited"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.sited"
+        },
+        "2": {
+          "name": "entity.name.tag.localname.sited"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.sited"
+        }
+      },
+      "end": "(\\]\\]>)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.cdata.sited"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.sited"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    }
+  }
+}
