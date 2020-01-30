@@ -5,7 +5,7 @@
     "author": "Yinr <yinr@yinr.cc>",
     "publisher": "Yinr",
     "icon": "assets/ddcat.png",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "engines": {
         "vscode": "^1.41.0"
     },
@@ -34,7 +34,8 @@
                     ".sited.xml"
                 ],
                 "configuration": "./languages/sited-language-configuration.json"
-            }, {
+            },
+            {
                 "id": "sited-js",
                 "aliases": [
                     "SiteD-js",
@@ -53,7 +54,8 @@
                     "source.sited.js": "sited-js",
                     "source.sited": "xml"
                 }
-            }, {
+            },
+            {
                 "language": "sited-js",
                 "scopeName": "source.sited.js",
                 "path": "./syntaxes/sited-js.tmLanguage.json",
