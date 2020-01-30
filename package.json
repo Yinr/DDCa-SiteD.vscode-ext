@@ -33,14 +33,33 @@
                     ".sited",
                     ".sited.xml"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./languages/sited-language-configuration.json"
+            }, {
+                "id": "sited-js",
+                "aliases": [
+                    "SiteD-js",
+                    "siteD-js",
+                    "Sited-js"
+                ],
+                "configuration": "./languages/sited-js-language-configuration.json"
             }
         ],
         "grammars": [
             {
                 "language": "sited",
                 "scopeName": "source.sited",
-                "path": "./syntaxes/sited.tmLanguage.json"
+                "path": "./syntaxes/sited.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.sited.js": "sited-js",
+                    "source.sited": "xml"
+                }
+            }, {
+                "language": "sited-js",
+                "scopeName": "source.sited.js",
+                "path": "./syntaxes/sited-js.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.sited.js": "javascript"
+                }
             }
         ]
     },

@@ -52,7 +52,7 @@
       ]
     },
     "cdata-js": {
-      "name": "meta.cdata.javascript.sited",
+      "name": "meta.cdata.js.sited",
       "begin": "(<!\\[)(CDATA)(\\[)",
       "beginCaptures": {
         "0": {
@@ -77,9 +77,10 @@
           "name": "punctuation.definition.tag.sited"
         }
       },
+      "contentName": "source.sited.js",
       "patterns": [
         {
-          "include": "source.js"
+          "include": "source.sited.js"
         }
       ]
     }

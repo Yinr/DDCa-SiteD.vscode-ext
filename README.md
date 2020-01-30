@@ -6,9 +6,13 @@ DDCat SiteD syntax for VS Code.
 
 ## Release Notes
 
+### 0.1.2
+
+Fix comment style
+
 ### 0.1.1
 
-add github link
+Add github link
 
 ### 0.1.0
 

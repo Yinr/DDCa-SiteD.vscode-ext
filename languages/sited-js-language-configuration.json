@@ -1,6 +1,7 @@
 {
     "comments": {
-        "blockComment": [ "<!--", "-->" ]
+        "lineComment": "",
+        "blockComment": [ "/*", "*/" ]
     },
     "brackets": [
         ["{", "}"],
@@ -20,11 +21,5 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ],
-    "folding": {
-        "markers": {
-            "start": "^.*<!\\[CDATA\\[",
-            "end": "^.*]]>"
-        }
-    }
+    ]
 }
