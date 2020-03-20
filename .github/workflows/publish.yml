@@ -1,0 +1,26 @@
+name: vsext Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  npm_setup:
+    name: npm setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install
+  ext_publish:
+    name: vscode ext publish
+    runs-on: ubuntu-latest
+    needs: [npm_setup]
+    steps:
+      - name: Vscode release plugin
+        uses: JCofman/vscodeaction@master
+        env:
+          PUBLISHER_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+        with:
+          args: publish -p $PUBLISHER_TOKEN
