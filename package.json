@@ -6,6 +6,10 @@
     "publisher": "Yinr",
     "icon": "assets/ddcat.png",
     "version": "0.1.2",
+    "main": "./src/extension",
+    "activationEvents": [
+        "onLanguage:sited"
+    ],
     "engines": {
         "vscode": "^1.41.0"
     },
@@ -63,7 +67,39 @@
                     "source.sited.js": "javascript"
                 }
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "sited.install.adb",
+                "title": "通过ADB安装插件",
+                "icon": "$(device-mobile)"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "resourceLangId==sited",
+                    "command": "sited.install.adb",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "configuration": {
+            "type": "object",
+            "title": "SiteD Plugin Setting",
+            "properties": {
+                "sited.DDCatDataPath": {
+                    "type": "string",
+                    "default": "/storage/emulated/0/Android/data/org.noear.ddcat",
+                    "description": "多多猫的数据文件夹，用于暂存安装插件"
+                },
+                "sited.ADBPath": {
+                    "type": "string",
+                    "default": "adb",
+                    "description": "ADB的路径，用于安装插件"
+                }
+            }
+        }
     },
     "devDependencies": {
         "js-yaml": "^3.13.1"
