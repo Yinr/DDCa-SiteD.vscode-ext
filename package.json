@@ -5,7 +5,7 @@
     "author": "Yinr <yinr@yinr.cc>",
     "publisher": "Yinr",
     "icon": "assets/ddcat.png",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "main": "./src/extension",
     "activationEvents": [
         "onLanguage:sited"
